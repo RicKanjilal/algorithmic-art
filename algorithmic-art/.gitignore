@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Saved outputs that aren't curated yet
+sketches/**/output*.png
+sketches/**/test_*.png

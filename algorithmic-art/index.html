@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithmic Art · Ric Kanjilal</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --fg: #e8e8ec;
+    --muted: #8a8a92;
+    --accent: #6ee7b7;
+    --card: #15151c;
+    --border: #25252e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 4rem 1.5rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #6ee7b7 0%, #93c5fd 50%, #c4b5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .meta a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+  .card-preview {
+    aspect-ratio: 4 / 3;
+    background: #1a1a23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-content {
+    padding: 1.5rem;
+  }
+  .card-num {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-family: 'SF Mono', Menlo, monospace;
+    margin-bottom: 0.5rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .card-desc {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-family: 'SF Mono', Menlo, monospace;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-right: 0.4rem;
+  }
+  footer {
+    text-align: center;
+    margin-top: 6rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Algorithmic Art</h1>
+    <p class="tagline">Code that makes pictures. Math that becomes mood.</p>
+    <p class="meta">
+      by <a href="https://github.com/RicKanjilal">Ric Kanjilal</a> ·
+      <a href="https://github.com/RicKanjilal/algorithmic-art">source on github</a>
+    </p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="sketches/01-flow-field/">
+      <div class="card-preview">→ click to run</div>
+      <div class="card-content">
+        <div class="card-num">SKETCH 01</div>
+        <div class="card-title">Flow Field</div>
+        <p class="card-desc">Thousands of particles trace invisible currents shaped by Perlin noise. The result looks like wind, smoke, or a topographic map of some place that doesn't exist.</p>
+        <span class="card-tag">organic</span>
+        <span class="card-tag">p5.js</span>
+      </div>
+    </a>
+
+    <a class="card" href="sketches/02-circle-packing/">
+      <div class="card-preview">→ click to run</div>
+      <div class="card-content">
+        <div class="card-num">SKETCH 02</div>
+        <div class="card-title">Circle Packing</div>
+        <p class="card-desc">Greedy algorithm fits circles of decreasing size into empty space. The result is a clean, mathematical mosaic that looks hand-drawn.</p>
+        <span class="card-tag">geometric</span>
+        <span class="card-tag">p5.js</span>
+      </div>
+    </a>
+
+    <a class="card" href="sketches/03-l-system-tree/">
+      <div class="card-preview">→ click to run</div>
+      <div class="card-content">
+        <div class="card-num">SKETCH 03</div>
+        <div class="card-title">L-System Tree</div>
+        <p class="card-desc">A string of symbols rewritten by recursive rules, then drawn with turtle graphics. The same maths describes how real plants grow.</p>
+        <span class="card-tag">organic</span>
+        <span class="card-tag">p5.js</span>
+      </div>
+    </a>
+
+    <a class="card" href="sketches/04-recursive-subdivision/">
+      <div class="card-preview">→ click to run</div>
+      <div class="card-content">
+        <div class="card-num">SKETCH 04</div>
+        <div class="card-title">Recursive Subdivision</div>
+        <p class="card-desc">A canvas split, then split again, then split again. Inspired by Mondrian's compositions — the maths underneath turns out to be just binary partitioning.</p>
+        <span class="card-tag">geometric</span>
+        <span class="card-tag">p5.js</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://github.com/RicKanjilal/algorithmic-art/tree/main/sketches/05-pixel-sort">
+      <div class="card-preview">→ python script (see github)</div>
+      <div class="card-content">
+        <div class="card-num">SKETCH 05</div>
+        <div class="card-title">Pixel Sort</div>
+        <p class="card-desc">Real photos, run through a threshold filter, then each row of pixels sorted by brightness. Beautiful glitches that look intentional.</p>
+        <span class="card-tag">glitch</span>
+        <span class="card-tag">python</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>MIT license · fork anything · post your remixes</p>
+  </footer>
+
+</div>
+</body>
+</html>
